@@ -14,9 +14,9 @@ const TIPO_CAMBIO_DOL = "dolar";
 const TIPO_CAMBIO_ETHEREUM = 13.54;
 const TIPO_CAMBIO_DOLAR = 39685.40;
 
-let tipoMonedaIngresada = prompt("Ingrese el tipo de moneda que quiere cambiar")
-let montoIngresado = prompt("Ingrese el monto a cambiar")
-let tipoMonedaCambio = prompt ("Ingrese la moneda a la cual quiere hacer el cambio")
+let tipoMonedaIngresada = prompt("Ingrese el tipo de moneda que quiere cambiar");
+let montoIngresado = parseInt ( prompt("Ingrese el monto a cambiar") );
+let tipoMonedaCambio = prompt ("Ingrese la moneda a la cual quiere hacer el cambio");
 
 if ((tipoMonedaIngresada == TIPO_MONEDA_ACEPTADA) && ((tipoMonedaCambio == TIPO_CAMBIO_ETH) || (tipoMonedaCambio == TIPO_CAMBIO_DOL)) ) {
   document.write("Dinero recibido = " + TIPO_MONEDA_ACEPTADA + "Monto recibido = " +montoIngresado);
