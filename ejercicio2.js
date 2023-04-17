@@ -14,19 +14,18 @@ const TIPO_CAMBIO_DOL = "dolar";
 const TIPO_CAMBIO_ETHEREUM = 13.54;
 const TIPO_CAMBIO_DOLAR = 39685.40;
 
-let tipoMonedaIngresada = prompt("Ingrese el tipo de moneda que quiere cambiar");
+let monedaIngresada = prompt("Ingrese el tipo de moneda que quiere cambiar");
 let montoIngresado = parseInt ( prompt("Ingrese el monto a cambiar") );
-let tipoMonedaCambio = prompt ("Ingrese la moneda a la cual quiere hacer el cambio");
+let monedaCambio = prompt ("Ingrese la moneda a la cual quiere hacer el cambio");
 
-if ((tipoMonedaIngresada == TIPO_MONEDA_ACEPTADA) && ((tipoMonedaCambio == TIPO_CAMBIO_ETH) || (tipoMonedaCambio == TIPO_CAMBIO_DOL)) ) {
-  document.write("Dinero recibido = " + TIPO_MONEDA_ACEPTADA + "Monto recibido = " +montoIngresado);
-
-  if (montoIngresado == TIPO_CAMBIO_ETH) {
-    document.write("Dinero cambiado = " + tipoMonedaCambio + "Monto cambiado = " +montoIngresado * TIPO_CAMBIO_ETHEREUM);
+if ((monedaIngresada == TIPO_MONEDA_ACEPTADA) && ((monedaACambiar == TIPO_CAMBIO_ETH)||(monedaACambiar==TIPO_CAMBIO_DOL))) {
+  document.write ("<h3>Moneda recibida = " +monedaIngresada+ ", Monto recibido = " + montoIngresado + "</h3>");
+  if (monedaACambiar == TIPO_CAMBIO_ETH) {
+      document.write ("<h3>Moneda cambiada = " + monedaACambiar+ ", Monto Cambiado = " + (montoIngresado*TIPO_CAMBIO_ETH)+"</h3" ); 
   }
-
-  else {document.write("Dinero cambiado = " + tipoMonedaCambio + "Monto cambiado = " +montoIngresado * TIPO_CAMBIO_DOL);}
-
+  else {
+      document.write ("<h3>Moneda cambiada = " + monedaACambiar+ ", Monto Cambiado = " + (montoIngresado*TIPO_CAMBIO_DOL)+"</h3>" ); 
+  }
 }
 
 else {
